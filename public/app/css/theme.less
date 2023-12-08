@@ -1,0 +1,304 @@
+/*
+*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,
+dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,
+legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,time,mark,audio,
+video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+nav ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+ins{background-color:#ff9;color:#000;text-decoration:none;}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+input,select{vertical-align:middle;}
+
+// Ryan Template
+
+// Less Css
+
+/************************/
+/*--------Fonts---------*/
+/************************/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-d62d8x');
+	src:url('fonts/icomoon.eot?#iefix-d62d8x') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-d62d8x') format('woff'),
+		url('fonts/icomoon.ttf?-d62d8x') format('truetype'),
+		url('fonts/icomoon.svg?-d62d8x#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cobra:before {
+	content: "\e600";
+}
+/************************/
+/*---Variables Start----*/
+/************************/
+@grey:rgba(214, 214, 214, 1);
+@lime: #1dd622;
+@orange: #ff854f;
+@purple: #b428be;
+@light-purple:#a150ff;
+@dark-blue: #2f28be;
+@lighter-blue: #4f64ff;
+@turquoise:#1ed3b0;
+@red: #ff4f4f;
+@burgundy: #d12064;
+@light-burgundy:#d293ab;
+@pink:#eeb5b5;
+@teal: #1ed3b0;
+@dark-teal: #0db595;
+// Text styling
+.text-shadow{
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.emboss{
+	text-shadow: -2px -2px 0px rgba(255,255,255,0.4),1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+// Box Styling
+.emboss-box-heavy{
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 
+    inset 0 2px 3px rgba(255,255,255,0.3),
+    inset 0 -2px 3px rgba(0,0,0,0.2),
+    0 1px 1px rgba(255,255,255,0.9);
+}
+.drop-shadow-bottom {
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.4);
+}
+// Transitions
+.transition-main{
+    -webkit-transition: all 0.3s ease; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s ease;
+}
+/************************/
+/*------Mixins End------*/
+/************************/
+
+
+/************************/
+/*------Navigation------*/
+/************************/
+
+// Navigation
+
+.cobra-icon{
+	font-size: 2.4em;
+    text-align: center;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 10px;
+    color:black;
+}
+.navbar-header:before {
+    height: 55px !important;
+
+}
+#navbar-container {
+	background-color: @grey!important;
+}
+#mainnav {
+	background-color: @grey!important;
+	color:black !important;
+}
+#mainnav-menu ul a, .menu-popover .sub-menu ul a, .menu-popover .sub-menu ul a {
+    color: @grey !important;
+}
+#mainnav-menu ul a:hover, .menu-popover .sub-menu ul a:hover, .menu-popover .sub-menu ul a:hover {
+color: black !important;
+box-shadow: 4px 0 0 0 #fff inset;
+}
+#mainnav-menu > li > a:hover, #mainnav-menu > li > a:active, #mainnav-menu > .active-link > a, 
+#mainnav-menu > .active-link > a:hover, #mainnav-menu > .active-sub > a, #mainnav-menu > .active-sub > a:hover, 
+#mainnav-menu ul .active-link a, .menu-popover .sub-menu ul .active-link a, .menu-popover .sub-menu ul .active-link a {
+box-shadow: 4px 0 0 0 #fff inset;
+}
+#container.mainnav-sm #mainnav .mainnav-widget > .show-small a:hover {
+box-shadow: 4px 0 0 0 #fff inset;
+}
+.pop-in ul li a {
+    color: @grey !important;
+}
+
+/************************/
+/*------Container-------*/
+/************************/
+body{
+	background-color: black;
+}
+#content-container {
+background-color: black !important;
+}
+.breadcrumb{
+	display:none !important;
+}
+#page-content {
+    padding: 6px 2px !important;
+}
+
+
+/************************/
+/*----Panel Changes-----*/
+/************************/
+.panel-body-margin{
+	margin: 25px;
+}
+.panel-blue,.panel-blue .panel-heading, .panel-blue .panel-footer, .panel-blue.panel-colorful {
+background-color: @lighter-blue;
+color: #fff;
+}
+.panel-dark-blue,.panel-dark-blue .panel-heading, .panel-dark-blue .panel-footer, .panel-dark-blue.panel-colorful {
+    background-color: @dark-blue !important;
+    color: #fff;
+}
+.panel-red,.panel-red .panel-heading, .panel-red .panel-footer, .panel-red.panel-colorful {
+    background-color: @red !important;
+    color: #fff;
+}
+.panel-orange,.panel-orange .panel-heading, .panel-orange .panel-footer, .panel-orange.panel-colorful {
+background-color: @orange;
+color: #fff;
+}
+.panel-lime,.panel-lime .panel-heading, .panel-lime .panel-footer, .panel-lime.panel-colorful {
+    background-color: @lime !important;
+    color: #fff;
+}
+.panel-purple,.panel-purple .panel-heading, .panel-purple .panel-footer, .panel-purple.panel-colorful {
+background-color: @purple!important;
+}
+.panel-burgundy,.panel-burgundy .panel-heading, .panel-burgundy .panel-footer, .panel-burgundy.panel-colorful {
+background-color: @burgundy!important;
+}
+/************************/
+/*--Bootstrap Overides--*/
+/************************/
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, 
+.col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, 
+.col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, 
+.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, 
+.col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, 
+.col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    min-height: 1px !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    position: relative;
+}
+.row {
+margin:0 auto !important;
+}
+.panel {
+margin-bottom: 3px !important;
+min-height: 330px !important;
+}
+
+.panel.sources {
+min-height: 515px !important;
+}
+.panel.countries {
+min-height: 515px !important;
+}
+
+/************************/
+/*--------Charts--------*/
+/************************/
+.panel > .panel-heading:after, .panel.panel-colorful > .panel-heading:after {
+border-bottom: 0px transparent !important;
+}
+.percent{
+	position: absolute !important;
+	top: 87%;
+	right: 5%;
+}
+// Embeded Charts
+.embed-chart{
+	margin: 0 auto !important;
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+padding:3px 2px;
+	@media (max-width: 991px){
+		padding: 0px 2px !important;
+	}
+}
+.highcharts-container{
+	width:100% !important;
+	left: 0 !important;
+	right:0 !important;
+	margin: 0 auto !important;
+}
+.panel-pull-front{
+position:relative;
+z-index: 1;
+}
+// Realtime Chart & Daily Chart
+.realtime-chart .panel-body{
+ padding: 0px !important;
+ padding-top: 50px !important;
+
+}
+.realtime-chart {
+	background-color: @dark-teal !important;
+}
+.realtime-chart h3{
+	color:white !important;
+}
+.daily-chart .panel-body{
+	padding: 0px !important;
+	padding-top: 50px !important;
+}
+.daily-chart {
+	background-color: @burgundy !important;
+}
+.daily-chart h3{
+	color:white !important;
+}
+
+/************************/
+/*----Table Changes-----*/
+/************************/
+
+// Country Map
+.countries .table-striped > tbody > tr:nth-child(2n+1) {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+// Sources
+.sources .table-striped > tbody > tr:nth-child(2n+1) {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/************************/
+/*-------Footer---------*/
+/************************/
+
+footer{
+	color: white !important;
+}

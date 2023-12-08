@@ -1,0 +1,45 @@
+/*
+#cb-dashboard .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding:2px !important;
+}
+
+#cb-dashboard .panel {
+  margin-bottom: 0px !important;
+}
+
+
+.col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding-left:4px;
+  padding-right:4px;
+  padding-top:2px;
+}
+
+.panel {
+  margin-bottom: 6px;
+}
+*/
+
+.selectbox {
+    background: none repeat scroll 0% 0% #FFF;
+    color: #333;
+    padding: 8px;
+    line-height: 18px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: #DDD;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-radius: 4px;
+    border-width: 1px 1px 1px;
+}
+
+#page-content {
+    padding: 0px 25px 0px;
+}
+
+select.form-control {
+  height:30px;
+}

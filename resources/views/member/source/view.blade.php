@@ -1,0 +1,57 @@
+@extends('layout')
+@section('content')
+<div class="row">
+	<div class="col-xs-12">
+		<div class="tab-base">
+			<ul id="cb-tab-menu" class="nav nav-tabs">
+				<li class="active">
+					<a aria-expanded="true" data-toggle="tab" href="#tab-1">Dashboard</a>
+				</li>
+				@if($source->is_domain())
+				<li>
+					<a aria-expanded="true" data-toggle="tab" href="#tab-2">Manage</a>
+				</li>
+				@endif
+				<li>
+					<a aria-expanded="true" data-toggle="tab" href="#tab-3">Edit</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+					<div id="tab-1" class="tab-pane active">
+						<div class="row">
+							<div class="col-lg-12">
+								{!! $dashboard_boxes !!}
+						    </div>
+						    <div class="col-lg-12">
+								{!! $dashboard_daily !!}
+						    </div>
+						    <!--
+						    <div class="col-lg-12">
+								//dashboard_daily_dns
+						    </div>
+						    !-->
+						</div>
+					</div>
+				@if($source->is_domain())
+					<div id="tab-2" class="tab-pane">
+						@include('shared.rules')
+						@include('shared.dns')
+					</div>
+				@endif
+				<div id="tab-3" class="tab-pane">
+					@include('member.source.details')
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$(function(){
+	<? if($source->is_domain()) { ?>
+		$('#cb-tab-menu a[href="#tab-2"]').tab('show');
+	<? } else { ?>
+		$('#cb-tab-menu a[href="#tab-1"]').tab('show');
+	<? } ?>
+});
+</script>
+@endsection
